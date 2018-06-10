@@ -1,0 +1,31 @@
+{
+  "extends": ["airbnb-base", "prettier"],
+  "env": {
+    "browser": false,
+    "node": true,
+    "commonjs": true,
+    "shared-node-browser": true,
+    "es6": true,
+    "mocha": true
+  },
+  "plugins": ["import"],
+  "settings": {
+    "import/resolver": {
+      "babel-module": {}
+    }
+  },
+  "rules": {
+    "no-console": 0,
+    "no-plusplus": 0,
+    "no-sequences": 0,
+    "import/prefer-default-export": 1,
+    "import/extensions": [
+      1,
+      {
+        "js": "never"
+      }
+    ],
+    "import/no-commonjs": 0,
+    "import/no-nodejs-modules": 0
+  }
+}

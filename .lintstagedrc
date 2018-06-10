@@ -1,0 +1,5 @@
+{
+  "**/*.js": ["prettier --write", "eslint --fix --color", "git add"],
+  "**/*.json": ["prettier --write", "git add"],
+  "./*.{*rc,json}": ["prettier --write --parser=json --print-width=1000000", "git add"]
+}

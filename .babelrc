@@ -1,0 +1,42 @@
+{
+  "sourceMaps": "both",
+  "ignore": ["node_modules"],
+  "presets": [
+    [
+      "env",
+      {
+        "useBuiltIns": true,
+        "loose": true,
+        "targets": {
+          "node": "current"
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    "syntax-trailing-function-commas",
+    "transform-async-generator-functions",
+    "transform-exponentiation-operator",
+    "transform-export-extensions",
+    "transform-object-rest-spread",
+    [
+      "transform-class-properties",
+      {
+        "spec": true
+      }
+    ],
+    [
+      // Настройки алиасов надо вручную переносить в webpack.config.js,
+      // чтобы Intellij IDEA также могла правильно резолвить пути
+      "module-resolver",
+      {
+        "extensions": [".js", ".es", ".es6", ".mjs"],
+        "root": ["./src"],
+        "alias": {
+          "@": "./src",
+          "test": "./test"
+        }
+      }
+    ]
+  ]
+}
