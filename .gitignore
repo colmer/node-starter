@@ -1,4 +1,6 @@
 /dist
+.idea/modules.xml
+.idea/node-starter.iml
 
 # Created by https://www.gitignore.io/api/node,bower,macos,windows,jetbrains+all
 
