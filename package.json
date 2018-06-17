@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "description": "",
   "scripts": {
-    "watch": "npm run babel:watch",
-    "_watch": "npm run babel:watch & npm run prettier:watch",
+    "watch": "npm run clean && npm run babel:watch",
+    "_watch": "npm run clean && npm run babel:watch & npm run prettier:watch",
     "build": "npm run clean && npm run babel",
     "dev": "node --stack-size=1024 --stack_trace_limit=1000 -r trace -r clarify -r source-map-support/register -r dotenv/config -r babel-polyfill",
     "start": "cross-env NODE_ENV=production node --stack-size=1024 --stack_trace_limit=1000 -r source-map-support/register -r dotenv/config -r babel-polyfill",
@@ -13,7 +13,7 @@
     "babel:watch": "babel src --out-dir dist --copy-files --source-maps --watch",
     "prettier": "prettier src/**/*.* --write",
     "prettier:watch": "onchange \"src/**/*.{js,json}\" -- prettier --write {{changed}}",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\" && exit 0",
     "*test": "mocha --compilers js:babel-register",
     "lint": "eslint ./src --quiet",
     "postcommit": "git update-index --again"
