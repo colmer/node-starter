@@ -19,6 +19,7 @@
     "transform-exponentiation-operator",
     "transform-export-extensions",
     "transform-object-rest-spread",
+    "dynamic-import-node",
     [
       "transform-class-properties",
       {

@@ -6,11 +6,11 @@
     "node": true,
     "commonjs": true,
     "shared-node-browser": true,
-    "es6": true,
-    "mocha": true
+    "es6": true
   },
-  "plugins": ["import"],
+  "plugins": ["import", "module-resolver"],
   "settings": {
+    // коммент
     "import/resolver": {
       "babel-module": {}
     }
@@ -27,6 +27,7 @@
       }
     ],
     "import/no-commonjs": 0,
-    "import/no-nodejs-modules": 0
+    "import/no-nodejs-modules": 0,
+    "module-resolver/use-alias": 2
   }
 }
